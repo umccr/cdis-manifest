@@ -1,37 +1,8 @@
 {
   "gaTrackingId": "UA-196652775-1",
   "graphql": {
-    "boardCounts": [
-      {
-        "graphql": "_subject_count",
-        "name": "Subject",
-        "plural": "Subjects"
-      },
-      {
-        "graphql": "_sample_count",
-        "name": "Sample",
-        "plural": "Samples"
-      },
-      {
-        "graphql": "_aliquot_count",
-        "name": "Aliquot",
-        "plural": "Aliquots"
-      }
-    ],
-    "chartCounts": [
-      {
-        "graphql": "_subject_count",
-        "name": "Subject"
-      },
-      {
-        "graphql": "_sample_count",
-        "name": "Sample"
-      },
-      {
-        "graphql": "_aliquot_count",
-        "name": "Aliquot"
-      }
-    ],
+    "boardCounts": [],
+    "chartCounts": [],
     "projectDetails": "boardCounts"
   },
   "components": {
@@ -51,20 +22,6 @@
           "label": "Learn more"
         },
         {
-          "name": "Explore Data",
-          "icon": "data-explore",
-          "body": "The Exploration Page gives you insights and a clear overview under selected factors.",
-          "link": "/explorer",
-          "label": "Explore data"
-        },
-        {
-          "name": "Access Data",
-          "icon": "data-access",
-          "body": "Use our selected tool to filter out the data you need.",
-          "link": "/query",
-          "label": "Query data"
-        },
-        {
           "name": "Submit Data",
           "icon": "data-submit",
           "body": "Submit Data based on the dictionary.",
@@ -80,30 +37,6 @@
           "icon": "dictionary",
           "link": "/DD",
           "name": "Dictionary",
-          "tooltip": ""
-        },
-        {
-          "icon": "exploration",
-          "link": "/explorer",
-          "name": "Exploration",
-          "tooltip": ""
-        },
-        {
-          "icon": "files",
-          "link": "/files",
-          "name": "Files",
-          "tooltip": ""
-        },
-        {
-          "icon": "query",
-          "link": "/query",
-          "name": "Query",
-          "tooltip": ""
-        },
-        {
-          "icon": "workspace",
-          "link": "#hostname#workspace/",
-          "name": "Workspace",
           "tooltip": ""
         },
         {
@@ -128,9 +61,9 @@
       ]
     },
     "login": {
-      "title": "UMCCR Data Commons",
+      "title": "PORTAL IS IN STEP1 CONFIG MODE",
       "subTitle": "The University of Melbourne Centre for Cancer Research",
-      "text": "The UMCCR focuses on improving the molecular detection and diagnosis of cancer, improving therapeutic decisions for patients through computational oncology, and enabling innovative programs in personalised cancer care. Based at the Victorian Comprehensive Cancer Centre (VCCC), the UMCCR facilitates the sharing of infrastructure and supports collaboration within the Melbourne Biomedical Precinct and the wider VCCC alliance.",
+      "text": "PORTAL IS IN STEP1 CONFIG MODE. YOU CAN HOWEVER PERFORM SOME INITIAL DATA SUBMISSION",
       "contact": "If you have any questions about access or the registration process, please contact ",
       "email": "services@umccr.org"
     },
@@ -183,58 +116,16 @@
     }
   },
   "dataExplorerConfig": {
-    "charts": {
-      "project_id": {
-        "chartType": "count",
-        "title": "Projects"
-      },
-      "node_id": {
-        "chartType": "count",
-        "title": "Subjects"
-      },
-      "gender": {
-        "chartType": "pie",
-        "title": "Gender"
-      },
-      "race": {
-        "chartType": "bar",
-        "title": "Race"
-      }
-    },
+    "charts": {},
     "filters": {
-      "tabs": [
-        {
-          "title": "Subject",
-          "fields":[
-            "project_id",
-            "gender",
-            "race",
-            "ethnicity"
-          ]
-        }
-      ]
+      "tabs": []
     },
     "table": {
       "enabled": false
     },
     "dropdowns": {},
     "buttons": [],
-    "guppyConfig": {
-      "dataType": "subject",
-      "nodeCountTitle": "Subjects",
-      "fieldMapping": [
-        { "field": "disease_type", "name": "Disease type" },
-        { "field": "primary_site", "name": "Site where samples were collected"}
-      ],
-      "manifestMapping": {
-        "resourceIndexType": "file",
-        "resourceIdField": "object_id",
-        "referenceIdFieldInResourceIndex": "_subject_id",
-        "referenceIdFieldInDataIndex": "_subject_id"
-      },
-      "accessibleFieldCheckList": ["project_id"],
-      "accessibleValidationField": "project_id"
-    }
+    "guppyConfig": {}
   },
   "fileExplorerConfig": {
     "charts": {
@@ -269,21 +160,6 @@
       ]
     },
     "dropdowns": {},
-    "guppyConfig": {
-      "dataType": "file",
-      "fieldMapping": [
-        { "field": "object_id", "name": "GUID" }
-      ],
-      "nodeCountTitle": "Files",
-      "manifestMapping": {
-        "resourceIndexType": "subject",
-        "resourceIdField": "_subject_id",
-        "referenceIdFieldInResourceIndex": "object_id",
-        "referenceIdFieldInDataIndex": "object_id"
-      },
-      "accessibleFieldCheckList": ["project_id"],
-      "accessibleValidationField": "project_id",
-      "downloadAccessor": "object_id"
-    }
+    "guppyConfig": {}
   }
 }

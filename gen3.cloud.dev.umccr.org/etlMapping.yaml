@@ -1,8 +1,8 @@
 mappings:
-  - name: etl
-    doc_type: case
+  - name: gen3.cloud.dev.umccr.org_subject
+    doc_type: subject
     type: aggregator
-    root: case
+    root: subject
     props:
       - name: submitter_id
       - name: project_id
@@ -27,9 +27,6 @@ mappings:
       - name: _aliquots_count
         path: samples.aliquots
         fn: count
-      - name: _submitted_methylations_count
-        path: samples.aliquots.submitted_methylation_files
-        fn: count
       - name: _submitted_copy_number_files_on_aliquots_count
         path: samples.aliquots.submitted_copy_number_files
         fn: count
@@ -50,7 +47,7 @@ mappings:
         fn: count
     joining_props:
       - index: file
-        join_on: _case_id
+        join_on: _subject_id
         props:
           - name: data_format
             src: data_format
@@ -61,12 +58,18 @@ mappings:
           - name: _file_id
             src: file_id
             fn: set
-  - name: file
+          - name: data_category
+            src: data_category
+            fn: set
+  - name: gen3.cloud.dev.umccr.org_file
     doc_type: file
     type: collector
     root: None
     category: data_file
     props:
+      - name: project_id
+      - name: submitter_id
+      - name: data_category
       - name: object_id
       - name: md5sum
       - name: file_name
@@ -75,12 +78,13 @@ mappings:
       - name: data_type
       - name: state
     injecting_props:
-      case:
+      subject:
         props:
-          - name: _case_id
+          - name: _subject_id
             src: id
             fn: set
+          - name: subject_submitter_id
+            src: submitter_id
+            fn: set
           - name: project_id
-    target_nodes:
-      - name: slide_image
-        path: slides.samples.cases
+            fn: set

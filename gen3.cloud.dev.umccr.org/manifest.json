@@ -1,7 +1,6 @@
 {
   "notes": [
-    "This is the release manifest",
-    "That's all I have to say"
+    "Main Manifest"
   ],
   "versions": {
     "arborist": "quay.io/cdis/arborist:2021.08",
@@ -219,7 +218,7 @@
     "environment": "umccrdev",
     "hostname": "gen3.cloud.dev.umccr.org",
     "revproxy_arn": "arn:aws:acm:ap-southeast-2:064933140851:certificate/74eea86f-6c3d-4336-949a-cdfa443fb3ac",
-    "dictionary_url": "https://s3.amazonaws.com/dictionary-artifacts/datadictionary/develop/schema.json",
+    "dictionary_url": "https://raw.githubusercontent.com/umccr/umccr-dictionary/main/schema/umccr_super.json",
     "portal_app": "gitops",
     "kube_bucket": "kube-umccr-test-gen3",
     "logs_bucket": "logs-umccr-test-gen3",
@@ -242,15 +241,15 @@
   "guppy": {
     "indices": [
       {
-        "index": "etl",
-        "type": "case"
+        "index": "gen3.cloud.dev.umccr.org_subject",
+        "type": "subject"
       },
       {
-        "index": "file",
+        "index": "gen3.cloud.dev.umccr.org_file",
         "type": "file"
       }
     ],
-    "config_index": "etl_array-config",
+    "config_index": "gen3.cloud.dev.umccr.org_array-config",
     "auth_filter_field": "auth_resource_path"
   },
   "scaling": {
