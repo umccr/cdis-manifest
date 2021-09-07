@@ -71,6 +71,16 @@
           "link": "/submission",
           "label": "Submit data"
         }
+      ],
+      "homepageChartNodes": [
+        {
+          "node": "subject",
+          "name": "Subjects"
+        },
+        {
+          "node": "sample",
+          "name": "Samples"
+        }
       ]
     },
     "navigation": {
