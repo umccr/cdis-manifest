@@ -1,0 +1,55 @@
+mappings:
+  - name: gen3.agha.umccr.org_subject
+    doc_type: subject
+    type: aggregator
+    root: subject
+    props:
+      - name: submitter_id
+      - name: project_id
+    aggregated_props:
+      - name: _samples_count
+        path: samples
+        fn: count
+    joining_props:
+      - index: file
+        join_on: _subject_id
+        props:
+          - name: data_format
+            src: data_format
+            fn: set
+          - name: data_type
+            src: data_type
+            fn: set
+          - name: _file_id
+            src: file_id
+            fn: set
+          - name: data_category
+            src: data_category
+            fn: set
+  - name: gen3.agha.umccr.org_file
+    doc_type: file
+    type: collector
+    root: None
+    category: data_file
+    props:
+      - name: project_id
+      - name: submitter_id
+      - name: data_category
+      - name: object_id
+      - name: md5sum
+      - name: file_name
+      - name: file_size
+      - name: data_format
+      - name: data_type
+      - name: state
+    injecting_props:
+      subject:
+        props:
+          - name: _subject_id
+            src: id
+            fn: set
+          - name: subject_submitter_id
+            src: submitter_id
+            fn: set
+          - name: project_id
+            fn: set
