@@ -132,9 +132,10 @@
       "title": "UMCCR AGHA Data Commons",
       "subTitle": "The University of Melbourne Centre for Cancer Research",
       "text": "The UMCCR focuses on improving the molecular detection and diagnosis of cancer, improving therapeutic decisions for patients through computational oncology, and enabling innovative programs in personalised cancer care. Based at the Victorian Comprehensive Cancer Centre (VCCC), the UMCCR facilitates the sharing of infrastructure and supports collaboration within the Melbourne Biomedical Precinct and the wider VCCC alliance.",
-      "contact": "If you have any questions about access or the registration process, please check Login & Signup section from User Guide ",
+      "contact": "In order to get access to data you need to be registered: ",
       "contact_link": {
-        "href": "https://go.unimelb.edu.au/9bui"
+        "text": "CILogon self registration",
+        "href": "https://registry-test.biocommons.org.au/registry/co_petitions/start/coef:22"
       }
     },
     "certs": {
