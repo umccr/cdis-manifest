@@ -199,6 +199,12 @@
       "file": ""
     }
   },
+  "featureFlags": {
+    "explorer": true,
+    "explorerPublic": true,
+    "discovery": false,
+    "discoveryUseAggMDS": false
+  },
   "dataExplorerConfig": {
     "charts": {
       "project_id": {
