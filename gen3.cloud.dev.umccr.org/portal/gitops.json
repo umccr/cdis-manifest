@@ -35,18 +35,18 @@
     "projectDetails": "boardCounts"
   },
   "components": {
-    "appName": "UMCCR Data Commons Portal",
+    "appName": "UMCCR (DEV) Data Commons Portal",
     "index": {
       "introduction": {
         "heading": "Data Commons",
-        "text": "The UMCCR Data Commons supports the management, analysis and sharing of data for the research community.",
+        "text": "The UMCCR (DEV) Data Commons supports the management, analysis and sharing of data for the research community.",
         "link": "/submission"
       },
       "buttons": [
         {
           "name": "Define Data Field",
           "icon": "data-field-define",
-          "body": "The UMCCR Data Commons define the data in a general way. Please study the dictionary before you start browsing.",
+          "body": "The UMCCR (DEV) Data Commons define the data in a general way. Please study the dictionary before you start browsing.",
           "link": "/DD",
           "label": "Learn more"
         },
@@ -84,7 +84,7 @@
       ]
     },
     "navigation": {
-      "title": "UMCCR Data Commons",
+      "title": "UMCCR (DEV) Data Commons",
       "items": [
         {
           "icon": "dictionary",
@@ -127,6 +127,11 @@
     "topBar": {
       "items": [
         {
+          "icon": "star",
+          "link": "/DD",
+          "name": "THIS IS DEV"
+        },
+        {
           "icon": "upload",
           "link": "/submission",
           "name": "Submit Data"
@@ -138,7 +143,7 @@
       ]
     },
     "login": {
-      "title": "UMCCR Data Commons",
+      "title": "UMCCR (DEV) Data Commons",
       "subTitle": "The University of Melbourne Centre for Cancer Research",
       "text": "The UMCCR focuses on improving the molecular detection and diagnosis of cancer, improving therapeutic decisions for patients through computational oncology, and enabling innovative programs in personalised cancer care. Based at the Victorian Comprehensive Cancer Centre (VCCC), the UMCCR facilitates the sharing of infrastructure and supports collaboration within the Melbourne Biomedical Precinct and the wider VCCC alliance.",
       "contact": "If you have any questions about access or the registration process, please check Login & Signup section from User Guide ",
