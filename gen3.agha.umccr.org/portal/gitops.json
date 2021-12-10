@@ -195,6 +195,14 @@
       "node_id": {
         "chartType": "count",
         "title": "Subjects"
+      },
+      "sex": {
+        "chartType": "pie",
+        "title": "Sex"
+      },
+      "population": {
+        "chartType": "bar",
+        "title": "Population"
       }
     },
     "filters": {
@@ -202,13 +210,22 @@
         {
           "title": "Subject",
           "fields":[
-            "project_id"
+            "project_id",
+            "sex",
+            "population"
           ]
         }
       ]
     },
     "table": {
-      "enabled": false
+      "enabled": true,
+      "fields": [
+        "project_id",
+        "submitter_id",
+        "sex",
+        "population",
+        "_samples_count"
+      ]
     },
     "dropdowns": {},
     "buttons": [],
@@ -249,7 +266,8 @@
           "fields": [
             "project_id",
             "data_type",
-            "data_format"
+            "data_format",
+            "data_category"
           ]
         }
       ]
@@ -258,16 +276,21 @@
       "enabled": true,
       "fields": [
         "project_id",
+        "subject_submitter_id",
         "file_name",
         "file_size",
-        "object_id"
+        "object_id",
+        "md5sum",
+        "sex",
+        "population"
       ]
     },
     "dropdowns": {},
     "guppyConfig": {
       "dataType": "file",
       "fieldMapping": [
-        { "field": "object_id", "name": "GUID" }
+        { "field": "object_id", "name": "GUID" },
+        { "field": "subject_submitter_id", "name": "Subject ID" }
       ],
       "nodeCountTitle": "Files",
       "manifestMapping": {

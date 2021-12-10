@@ -6,6 +6,8 @@ mappings:
     props:
       - name: submitter_id
       - name: project_id
+      - name: sex
+      - name: population
     aggregated_props:
       - name: _samples_count
         path: samples
@@ -52,4 +54,10 @@ mappings:
             src: submitter_id
             fn: set
           - name: project_id
+            fn: set
+          - name: sex
+            src: sex
+            fn: set
+          - name: population
+            src: population
             fn: set
